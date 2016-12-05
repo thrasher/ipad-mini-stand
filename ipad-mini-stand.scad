@@ -47,9 +47,9 @@ translate([0,0,20])
 difference() {
 	color([0,1,1]) {
 		rotate([0,-17,0])
-		writesphere(text="Love You", where=[0,0,0], radius=-40, font = "orbitron.dxf", rounded=true,  east=90, h=10, t=0.001);
+		writesphere(text="Pride in Craft", where=[0,0,0], radius=-40, font = "orbitron.dxf", rounded=true,  east=90, h=10, t=0.001);
 		rotate([0,-17,180])
-		writesphere(text="2016", where=[0,0,0], radius=-40, font = "orbitron.dxf", rounded=true,  east=90, h=10, t=0.001);
+		writesphere(text="IFTTT 2016", where=[0,0,0], radius=-40, font = "orbitron.dxf", rounded=true,  east=90, h=10, t=0.001);
 	}
 	sphere(d = outside_dia-thickness-2);
 }
