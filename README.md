@@ -5,6 +5,7 @@ The iPad mini can sit at either of two angles.
 
 Tablets larger than an iPad mini may fall backwards on the larger angle, due to where their center of gravity is.
 
-Get submodules with:
-  git submodule update --init --recursive
+## Development Steps
+
+    git submodule update --init --recursive
 
