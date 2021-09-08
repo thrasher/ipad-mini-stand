@@ -5,10 +5,10 @@ $fs = 0.1; // mm per facet in cylinder
 $fa = 2; // degrees per facet in cylinder
 $fn = 140;
 
-outside_dia = 90; // 100 for ipad mini
+outside_dia = 90; // 100 for ipad mini, 90 is good for iPhone 11 Max
 thickness=outside_dia/10;
-ipad_thickness = 7.7; // iphone5 is 7.6mm thick
-lip_height=3.5;
+ipad_thickness = 8.3; // 7.6mm for iphone5, 8.3mm for iPhone 11 Max
+lip_height=4;
 charger_hole=10;
 
 module slot(LIP_WIDTH = 40, ADD_CHARGER_PORT = false) {
@@ -68,20 +68,20 @@ module base() {
 	// add writing
 	// note: there appears to be a bug in Write.scad where negative radius spherical text renders at the wrong thickness (t)
 	// so we chop it off with another sphere!
-	text_thickness=2;
-	translate([0,0,outside_dia * 0.20]) {
-		difference() {
-			color([0,1,1]) {
-				rotate([0,-18,0])
-				writesphere(text="Thrasher        2020", where=[0,0,0], radius=-(outside_dia/2-thickness), font = "orbitron.dxf", rounded=true,  east=90, h=outside_dia/10, text_thickness=1);
-				// rotate([0,-16,180])
-				// writesphere(text="  Give    Thanks", where=[0,0,0], radius=-(outside_dia/2-thickness), font = "orbitron.dxf", rounded=true,  east=90, h=outside_dia/10, text_thickness=1);
-			}
-			echo(outside_dia/2);
-			echo(outside_dia/2-7);
-			sphere(d = outside_dia-thickness-text_thickness);
-		}
-	}
+	// text_thickness=2;
+	// translate([0,0,outside_dia * 0.20]) {
+	// 	difference() {
+	// 		color([0,1,1]) {
+	// 			rotate([0,-18,0])
+	// 			writesphere(text="Thrasher        2020", where=[0,0,0], radius=-(outside_dia/2-thickness), font = "orbitron.dxf", rounded=true,  east=90, h=outside_dia/10, text_thickness=1);
+	// 			// rotate([0,-16,180])
+	// 			// writesphere(text="  Give    Thanks", where=[0,0,0], radius=-(outside_dia/2-thickness), font = "orbitron.dxf", rounded=true,  east=90, h=outside_dia/10, text_thickness=1);
+	// 		}
+	// 		echo(outside_dia/2);
+	// 		echo(outside_dia/2-7);
+	// 		sphere(d = outside_dia-thickness-text_thickness);
+	// 	}
+	// }
 }
 
 PART = "all";
